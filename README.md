@@ -21,5 +21,5 @@
 
 - Avaliação quantitativa (como será feita): Contagem dos Code Smells via ferramenta.
 
-- Avaliação qualitativa (como será feita): Legibilidade e qualidade da refatoração via verificação humana.
+- Avaliação qualitativa (como será feita): Categorização dos Code Smells.
 
