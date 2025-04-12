@@ -9,11 +9,11 @@
 
 # Objetivo do Trabalho:
 
-  Neste trabalho, faremos um trabalho? :p
+  Neste trabalho, faremos uma análise da capacidade de um grande modelo de linguagem (DeepSeek) de refatorar códigos em comparação com a refatoração feita por humanos. Assim, nosso objetivo é contrastar as diferenças entre refatorações feitas por humanos e LLMs.
 
 # Metodologia:
 
-- Modelo de linguagem que será usado: 
+- Modelo de linguagem que será usado: DeepSeek
 
 - Datasets (número e critérios de seleção dos sistemas):
 
