@@ -9,7 +9,7 @@
 
 # Objetivo do Trabalho:
 
-  Neste trabalho, faremos uma análise da capacidade de um grande modelo de linguagem (DeepSeek) de refatorar códigos em comparação com a refatoração feita por humanos. Assim, nosso objetivo é contrastar as diferenças entre refatorações feitas por humanos e LLMs.
+ Neste trabalho, faremos uma análise da capacidade de um grande modelo de linguagem (DeepSeek) de refatorar códigos em comparação com a refatoração feita por humanos. Nosso objetivo principal é contrastar as diferenças entre refatorações realizadas manualmente por desenvolvedores e aquelas geradas automaticamente por LLMs, considerando critérios como legibilidade, complexidade, qualidade estrutural e aderência a boas práticas de desenvolvimento. 
 
 # Metodologia:
 
