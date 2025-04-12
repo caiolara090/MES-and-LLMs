@@ -19,7 +19,7 @@
 
 - Exemplos preliminares de prompts (opcional): "You are a powerful model specialized in refactoring Java code. Code refactoring is the process of improving the internal structure, readability, and maintainability of a software codebase without altering its external behavior or functionality. You must output a refactored version of the code."
 
-- Avaliação quantitativa (como será feita): Avaliação dos Code Smells via DesigniteJava.
+- Avaliação quantitativa (como será feita): Contagem dos Code Smells via ferramenta.
 
 - Avaliação qualitativa (como será feita): Legibilidade e qualidade da refatoração via verificação humana.
 
