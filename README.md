@@ -15,7 +15,7 @@
 
 - Modelo de linguagem que será usado: DeepSeek R1
 
-- Datasets (número e critérios de seleção dos sistemas): https://github.com/Software-Evolution-Analytics-Lab-SEAL/LLM_Refactoring_Evaluation/blob/main/RQ1/sampled_dataset.jsonl - Dataset com 5000 códigos.
+- Datasets (número e critérios de seleção dos sistemas): https://github.com/Software-Evolution-Analytics-Lab-SEAL/LLM_Refactoring_Evaluation/blob/main/RQ1/sampled_dataset.jsonl - Dataset com milhares de amostras.
 
 - Exemplos preliminares de prompts (opcional): "You are a powerful model specialized in refactoring Java code. Code refactoring is the process of improving the internal structure, readability, and maintainability of a software codebase without altering its external behavior or functionality. You must output a refactored version of the code."
 
