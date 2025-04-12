@@ -13,7 +13,7 @@
 
 # Metodologia:
 
-- Modelo de linguagem que será usado: DeepSeek
+- Modelo de linguagem que será usado: DeepSeek R1
 
 - Datasets (número e critérios de seleção dos sistemas): https://github.com/Software-Evolution-Analytics-Lab-SEAL/LLM_Refactoring_Evaluation/blob/main/RQ1/sampled_dataset.jsonl - Dataset com 5000 códigos.
 
