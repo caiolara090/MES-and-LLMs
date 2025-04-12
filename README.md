@@ -1,4 +1,4 @@
-# MES-and-LLMs
+# Avaliação do Uso de LLMs para Refatoração de Código
 
 # Membros do Grupo:
 
