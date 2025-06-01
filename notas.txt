@@ -1,0 +1,66 @@
+Total de refatorações: 49080
+Total de Tipos de Refatoração: 54
+
+Tipos de refatoração e contagem:
+refactoring_type
+Add Method Annotation              6682
+Move Class                         4400
+Change Parameter Type              3766
+Rename Method                      3037
+Change Variable Type               3022
+Add Class Annotation               2816
+Change Return Type                 2595
+Modify Class Annotation            2392
+Add Parameter                      2169
+Extract Method                     2021
+Modify Method Annotation           1651
+Rename Variable                    1535
+Rename Class                       1425
+Change Attribute Type              1327
+Remove Class Annotation            1246
+Remove Method Annotation           1208
+Move And Rename Class               882
+Rename Attribute                    673
+Remove Parameter                    650
+Extract And Move Method             649
+Rename Parameter                    512
+Add Attribute Annotation            502
+Extract Variable                    442
+Move Method                         398
+Move Source Folder                  346
+Inline Method                       307
+Move Attribute                      299
+Remove Attribute Annotation         237
+Pull Up Method                      227
+Parameterize Variable               188
+Extract Class                       161
+Remove Parameter Annotation         154
+Change Package                      137
+Pull Up Attribute                   133
+Add Parameter Annotation            130
+Modify Attribute Annotation          96
+Move And Inline Method               92
+Inline Variable                      79
+Extract Attribute                    64
+Extract Interface                    62
+Modify Parameter Annotation          62
+Extract Superclass                   59
+Replace Variable With Attribute      52
+Push Down Attribute                  51
+Move And Rename Method               43
+Push Down Method                     32
+Reorder Parameter                    27
+Merge Parameter                      14
+Extract Subclass                     10
+Merge Attribute                       7
+Merge Variable                        6
+Split Parameter                       2
+Split Attribute                       2
+Replace Attribute                     1
+Name: count, dtype: int64
+
+Total de arquivos modificados (únicos): 33504
+Total de modificações em arquivos (com repetição): 1952433
+Número médio de arquivos por refatoração: 39.78062347188264
+
+Total de commits distintos: 5194
