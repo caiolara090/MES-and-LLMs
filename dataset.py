@@ -34,20 +34,20 @@ def gerar_requisicoes_individuais(df, pasta="requisicoes"):
         if not arquivos:
             continue
         arquivo = arquivos[0]
-        prompt = f"""Refatore o código abaixo aplicando a seguinte técnica: **{row['refactoring_type']}**.
+        prompt = f"""You are a powerful model specialized in refactoring Java code. Code refactoring is  the process of improving the internal structure, readability, and maintainability of a software codebase without altering its external behavior or functionality. Refactor the code below using the following technique: **{row['refactoring_type']}**.
 
-Regras:
-- Mantenha a funcionalidade original.
-- Retorne **apenas o código completo**.
-- Não inclua explicações ou comentários.
-- O código deve estar delimitado em blocos de código válidos.
+Rules:
+- Preserve the original functionality.
+- Return **only the complete refactored code**.
+- Do not include any explanations or comments,. only the code. 
+- The code must be enclosed in a valid code block.
 
-### Código original:
+### Original Code:
 ```java
 {arquivo['before_refactoring'].strip()}
 ```
 
-Código refatorado:"""
+Refactored Code:"""
 
         req = {
         "model": "deepseek-coder:6.7b",
@@ -87,6 +87,6 @@ def enviar_requisicoes(pasta_reqs="requisicoes", pasta_respostas="respostas"):
 
 # Execução
 df = load_and_expand_jsonl("sampled_dataset.jsonl")
-df_amostrado = selecionar_top_refatoracoes(df, top_n=10, exemplos_por_tipo=20)
+df_amostrado = selecionar_top_refatoracoes(df, top_n=10, exemplos_por_tipo=10)
 gerar_requisicoes_individuais(df_amostrado)
 enviar_requisicoes()
