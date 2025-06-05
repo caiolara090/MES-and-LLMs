@@ -25,9 +25,10 @@ def main():
         os.makedirs(output_dir)
 
     with open("sampled_dataset.jsonl", "r") as test_file, open(output_file_path, "a") as results_file:
-        lines = test_file.readlines()
-        for i in range(start_line, len(lines)):
-            data = json.loads(lines[i])
+        for numline, line in enumerate(test_file):
+            if numline < start_line:
+                continue
+            data = json.loads(line)
             project = data.get('project', '')
             commit_sha = data.get('commit_sha', '')
             files = data.get('files', [])
@@ -58,7 +59,6 @@ def main():
                 }
 
                 start_time = time.time()
-                print("Generating output via API")
                 
                 response = requests.post("http://127.0.0.1:11434/api/generate", json=payload)
                 response.raise_for_status()
