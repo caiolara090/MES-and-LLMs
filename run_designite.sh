@@ -25,7 +25,7 @@ for PROJECT_FOLDER in "$PROJECTS_DIR"/*; do
         PROJECT_NAME=$(basename "$PROJECT_FOLDER")
         
         # Define the output directory name
-        OUTPUT_DIR="code_smells/${PROJECT_NAME}_smells"
+        OUTPUT_DIR="code_smells_llm/${PROJECT_NAME}_smells"
         
         # Run the DesigniteJava tool
         echo "Processing project: $PROJECT_NAME"

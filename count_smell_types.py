@@ -2,8 +2,8 @@ import os
 import csv
 from collections import defaultdict
 
-CODE_SMELL_DIRECTORY = "code_smells"
-OUTPUT_FILE = "code_smell_type_distribution.csv"
+CODE_SMELL_DIRECTORY = "code_smells_llm"
+OUTPUT_FILE = "code_smell_llm_type_distribution.csv"
 
 def count_code_smells(directory):
     overall_distribution = defaultdict(lambda: defaultdict(int))

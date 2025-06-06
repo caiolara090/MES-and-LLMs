@@ -44,13 +44,11 @@ def process_jsonl(input_file_path, original_file_set, refactoring_key, output_di
                 project_name = data.get("project", "default_project_name")
                 commit_sha = data.get("commit_sha", "default_commit_sha")
                 files = data.get("files", [])
-                # print(f"Processing project: {project_name}, commit: {commit_sha}")
 
                 for file_data in files:
                     file_name = file_data.get("file_name", "default_name.java")
                     file_key = (project_name, commit_sha, file_name)
                     if file_key not in original_file_set:
-                        # print(f"Skipping file: {file_name} as it is not in the original dataset.")
                         continue  # Skip saving if the file is not in the original dataset
 
                     after_refactoring = file_data.get(f"{refactoring_key}", "")
