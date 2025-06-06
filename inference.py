@@ -16,9 +16,24 @@ def main():
     output_file_path = args.output_file
     model_name = args.model
 
-    DEFAULT_SYSTEM_PROMPT = """You are a powerful model specialized in refactoring Java code. Code refactoring is
-    the process of improving the internal structure, readability, and maintainability of a software codebase without 
-    altering its external behavior or functionality. You must output a refactored version of the code."""
+    DEFAULT_SYSTEM_PROMPT = """You are a powerful model specialized in refactoring Java code. Code refactoring is  the process of improving the internal structure, readability, and maintainability of a software codebase without altering its external behavior or functionality.
+
+Rules:
+
+- Preserve the original functionality.
+- Do not include any explanations or comments, only the code. 
+- The code must be enclosed in a valid code block.
+- You must format the code in the same way as the input. No need for ```, just the code block.
+- Include the index line at the start of the code block.
+
+Example:
+
+# unrefactored code:
+index f51a2616ac6..fccd1ee5ba0 100644\n--- a/components/camel-bean-validator/src/main/java/org/apache/camel/component/bean/validator/BeanValidator.java\n+++ b/components/camel-bean-validator/src/main/java/org/apache/camel/component/bean/validator/BeanValidator.java\n     \n     private ValidatorFactory validatorFactory;\n     private Validator validator;\n    @SuppressWarnings(\"unchecked\")\n     private Class group;\n     \n     public void process(Exchange exchange) throws Exception {\n     public Validator getValidator() {\n         return validator;\n     }\n\n    @SuppressWarnings(\"unchecked\")\n     public Class getGroup() {\n         return group;\n     }\n\n    @SuppressWarnings(\"unchecked\")\n     public void setGroup(Class group) {\n         this.group = group;\n     }
+
+# refactored version of the same code:
+index f51a2616ac6..fccd1ee5ba0 100644\n--- a/components/camel-bean-validator/src/main/java/org/apache/camel/component/bean/validator/BeanValidator.java\n+++ b/components/camel-bean-validator/src/main/java/org/apache/camel/component/bean/validator/BeanValidator.java\n     \n     private ValidatorFactory validatorFactory;\n     private Validator validator;\n     private Class group;\n     \n     public void process(Exchange exchange) throws Exception {\n     public Validator getValidator() {\n         return validator;\n     }\n    \n     public Class getGroup() {\n         return group;\n     }\n   \n     public void setGroup(Class group) {\n         this.group = group;\n     }
+"""
 
     output_dir = os.path.dirname(output_file_path)
     if output_dir and not os.path.exists(output_dir):
@@ -40,9 +55,7 @@ def main():
                 if not before_code.strip():
                     continue
 
-                prompt = f"""{DEFAULT_SYSTEM_PROMPT}
-
-# unrefactored code:
+                prompt = f"""# unrefactored code:
 {before_code}
 
 # refactored version of the same code:
@@ -55,7 +68,8 @@ def main():
                     "prompt": prompt,
                     "stream": False,
                     "temperature": 0.2,
-                    "top_p": 0.95
+                    "top_p": 0.95,
+                    "system": DEFAULT_SYSTEM_PROMPT 
                 }
 
                 start_time = time.time()
